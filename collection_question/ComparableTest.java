@@ -19,7 +19,10 @@ public class ComparableTest {
         emps[4]=new Employee(35,   "shikha");
         System.out.println(emps);
 
+        //Arrays.sort(emps); using comparable compareTo method like natural sorting
         Arrays.sort(emps);
-        System.out.println(Arrays.toString(emps));
+        System.out.println("compare using id"+Arrays.toString(emps));
+        Arrays.sort(emps,Employee.NameComparator);
+        System.out.println("Compare using name"+Arrays.toString(emps));
     }
 }
